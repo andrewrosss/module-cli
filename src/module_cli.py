@@ -5,7 +5,7 @@ from io import TextIOWrapper
 from typing import NoReturn
 
 
-__version__ = "0.1.0"  # module-cli version
+__version__ = "1.0.0"  # module-cli version
 
 MODULE_S = """\
 from __future__ import annotations
