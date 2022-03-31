@@ -5,6 +5,26 @@ description = "Bootstrap extensible single-module CLIs"
 authors = ["Andrew Ross <andrew.ross.mail@gmail.com>"]
 license = "MIT"
 
+readme = "README.md"
+
+keywords = ["cli", "argparse", "tool"]
+
+homepage = "https://github.com/andrewrosss/module-cli"
+repository = "https://github.com/andrewrosss/module-cli"
+documentation = "https://github.com/andrewrosss/module-cli"
+
+classifiers = [
+    "Programming Language :: Python :: 3.0",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+    "Environment :: Console",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: User Interfaces",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+
 [tool.poetry.dependencies]
 python = "^3.7"
 
