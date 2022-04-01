@@ -2,6 +2,8 @@
 
 Bootstrap extensible single-module CLIs
 
+[![PyPI Version](https://img.shields.io/pypi/v/module-cli.svg)](https://pypi.org/project/module-cli/)
+
 ## Installation
 
 ### With `pipx`
