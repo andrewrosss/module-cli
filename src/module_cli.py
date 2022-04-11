@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import argparse
 from typing import NoReturn
+from typing import Sequence
 
 
 __version__ = "0.1.0"
@@ -21,13 +22,13 @@ def cli() -> NoReturn:
     raise SystemExit(main())
 
 
-def main() -> int | str:
+def main(args: Sequence[str] | None = None) -> int | str:
     parser = create_parser()
-    args = parser.parse_args()
-    debug: bool = args.debug
+    ns = parser.parse_args(args)
+    debug: bool = ns.debug
 
     try:
-        return args.handler(args)
+        return ns.handler(ns)
     except Exception as e:
         if debug:
             raise
@@ -57,7 +58,7 @@ def create_parser(
     return parser
 
 
-def handler(args: argparse.Namespace) -> int:
+def handler(ns: argparse.Namespace) -> int:
     # -----------------
     # ADD PROGRAM LOGIC
     # -----------------
@@ -68,7 +69,6 @@ def handler(args: argparse.Namespace) -> int:
 
 if __name__ == "__main__":
     cli()
-
 """
 
 
