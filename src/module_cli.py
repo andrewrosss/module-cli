@@ -21,15 +21,18 @@ def cli() -> NoReturn:
     raise SystemExit(main())
 
 
-def main() -> int:
+def main() -> int | str:
     parser = create_parser()
     args = parser.parse_args()
+    debug: bool = args.debug
 
-    if hasattr(args, "handler"):
+    try:
         return args.handler(args)
-
-    parser.print_help()
-    return 1
+    except Exception as e:
+        if debug:
+            raise
+        else:
+            return str(e)
 
 
 def create_parser(
@@ -37,6 +40,13 @@ def create_parser(
 ) -> argparse.ArgumentParser:
     parser = parser or argparse.ArgumentParser()
     parser.add_argument("-v", "--version", action="version", version=__version__)
+    parser.add_argument(
+        "-D",
+        "--debug",
+        action="store_true",
+        default=False,
+        help="run program in debug mode",
+    )
 
     # ---------------------------------
     # CONFIGURE COMMAND-LINE ARGUGMENTS
@@ -48,9 +58,9 @@ def create_parser(
 
 
 def handler(args: argparse.Namespace) -> int:
-    # ------------------
-    # ADD BUSINESS LOGIC
-    # ------------------
+    # -----------------
+    # ADD PROGRAM LOGIC
+    # -----------------
     print("Hello, World!")
 
     return 0
@@ -58,6 +68,7 @@ def handler(args: argparse.Namespace) -> int:
 
 if __name__ == "__main__":
     cli()
+
 """
 
 
