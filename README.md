@@ -1,6 +1,6 @@
 # module-cli
 
-Bootstrap extensible single-module CLIs
+Bootstrap extensible single-module python CLIs
 
 [![PyPI Version](https://img.shields.io/pypi/v/module-cli.svg)](https://pypi.org/project/module-cli/)
 
@@ -26,7 +26,9 @@ Which you can then use the CLI:
 
 ```bash
 $ module-cli -h
-usage: module-cli [-h] [-v] [out]
+usage: module-cli [-h] [-v] [-D] [out]
+
+Bootstrap a single-module python CLI
 
 positional arguments:
   out            File to write to. (default: -)
@@ -34,6 +36,7 @@ positional arguments:
 optional arguments:
   -h, --help     show this help message and exit
   -v, --version  show program's version number and exit
+  -D, --debug    run program in debug mode
 ```
 
 ## Installing your CLI
