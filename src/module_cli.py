@@ -19,8 +19,8 @@ from typing import Sequence
 __version__ = "0.1.0"
 
 
-def cli() -> NoReturn:
-    raise SystemExit(main())
+def cli(args: Sequence[str] | None = None) -> NoReturn:
+    raise SystemExit(main(args))
 
 
 def main(args: Sequence[str] | None = None) -> int | str:
