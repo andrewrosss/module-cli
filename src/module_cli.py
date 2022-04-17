@@ -94,7 +94,8 @@ def main(args: Sequence[str] | None = None) -> int | str:
 def create_parser(
     parser: argparse.ArgumentParser | None = None,
 ) -> argparse.ArgumentParser:
-    parser = parser or argparse.ArgumentParser()
+    description = "Bootstrap a single-module python CLI"
+    parser = parser or argparse.ArgumentParser(description=description)
     parser.add_argument("-v", "--version", action="version", version=__version__)
     parser.add_argument(
         "-D",
