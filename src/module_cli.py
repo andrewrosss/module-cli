@@ -73,7 +73,7 @@ if __name__ == "__main__":
 """
 
 
-def cli() -> NoReturn:
+def cli(args: Sequence[str] | None = None) -> NoReturn:
     raise SystemExit(main())
 
 
@@ -125,4 +125,4 @@ def handler(ns: argparse.Namespace) -> int:
 
 
 if __name__ == "__main__":
-    cli()
+    cli()  # pragma: no cover
