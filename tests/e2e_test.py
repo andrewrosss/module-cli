@@ -18,7 +18,7 @@ def test_cli_writes_to_stdout_when_no_args_provided():
 def test_cli_writes_to_file_when_arg_provided(tmp_path: Path):
     module_path = tmp_path / "t.py"
 
-    assert module_path.read_text().strip() == ""
+    assert not module_path.exists()
 
     args = ("module-cli", str(module_path))
     completed_process = subprocess.run(args, text=True, capture_output=True)
