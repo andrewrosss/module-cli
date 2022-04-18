@@ -3,6 +3,10 @@
 Bootstrap extensible single-module python CLIs
 
 [![PyPI Version](https://img.shields.io/pypi/v/module-cli.svg)](https://pypi.org/project/module-cli/)
+[![codecov](https://codecov.io/gh/andrewrosss/module-cli/branch/master/graph/badge.svg?token=6LjO72NbGd)](https://codecov.io/gh/andrewrosss/module-cli)
+[![Tests](https://github.com/andrewrosss/module-cli/workflows/Tests/badge.svg)](https://github.com/andrewrosss/module-cli/actions/workflows/test.yaml)
+[![Code Style](https://github.com/andrewrosss/module-cli/actions/workflows/lint.yaml/badge.svg)](https://github.com/andrewrosss/module-cli/actions/workflows/lint.yaml)
+[![Type Check](https://github.com/andrewrosss/module-cli/actions/workflows/type-check.yaml/badge.svg)](https://github.com/andrewrosss/module-cli/actions/workflows/type-check.yaml)
 
 ## Installation
 
