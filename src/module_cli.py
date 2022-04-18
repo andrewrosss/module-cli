@@ -6,7 +6,7 @@ from typing import NoReturn
 from typing import Sequence
 
 
-__version__ = "22.4.1"  # module-cli version
+__version__ = "22.4.2"  # module-cli version
 
 MODULE_S = """\
 from __future__ import annotations
